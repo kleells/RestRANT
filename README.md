@@ -1,17 +1,17 @@
 # Project REST-Rant
 
 ## TECH USED
-**CSS Framework:** Bootstrap
-**Stack:** MongoDB, Express, NodeJS
-**Server-Side Rendering:** JSX
-**Node Modules:** method-override, dotenv, express-react-views
+- **CSS Framework:** Bootstrap
+- **Stack:** MongoDB, Express, NodeJS
+- **Server-Side Rendering:** JSX
+- **Node Modules:** method-override, dotenv, express-react-views
 
 REST-Rant is an app where users can review restaurants.
 
 ## ROUTES
 | Complete | Method    | Path                      |  Purpose                |
 | -------- | --------- | ------------------------- | ----------------------- |
-|  Y       |  GET       | /                         | Home page               |
+|  Y       |  GET       | /                         | Home page              |
 |          | GET       | /places                   | Places index page       |
 |          | POST      | /places                   | Create a new place      |
 |          | GET       | /places/new               | Form for adding place   |
