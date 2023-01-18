@@ -1,8 +1,14 @@
 # Project REST-Rant
 
+## TECH USED
+**CSS Framework:** Bootstrap
+**Stack:** MongoDB, Express, NodeJS
+**Server-Side Rendering:** JSX
+**Node Modules:** method-override, dotenv, express-react-views
+
 REST-Rant is an app where users can review restaurants.
 
-ROUTES
+## ROUTES
 | Complete | Method    | Path                      |  Purpose                |
 | -------- | --------- | ------------------------- | ----------------------- |
 |     Y    | GET       | /                         | Home page               |
@@ -16,3 +22,6 @@ ROUTES
 |          | POST      | /places/:id/rant          | Create a comment        |
 |          | DELETE    | /places/:id/rant/:rantId  | Delete a comment        |
 |     Y    | GET       |          *                | 404 page/wildcard route |
+
+## FUTURE TASKS
+[ ] finalize README
