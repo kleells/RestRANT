@@ -1,0 +1,25 @@
+:root{
+    /* Palette Colors*/
+    --palette-gold: #d4af37;
+    --palette-grey: #aaa9a8;
+    --palette-dark-red: #7A0202;
+    /* Other Colors Defined */
+    --background-color: white;
+    --text-color: black;
+    --add-button-color: rgb(124, 201, 124);
+    --edit-button-color: rgb(245, 245, 103);
+    --delete-button-color: rgb(240, 70, 70);
+    --like-button-color: rgb(200, 100, 200);
+    --comment-button-color: rgb(255, 179, 37);
+}
+
+h1 {
+    text-align: center;
+    color: var(--palette-dark-red);
+}
+
+body{
+    background-image:  linear-gradient(to right top, #d4af37, #d2ac51, #ceab67, #c7a97b, #bda98f, #bda98f, #bda98f, #bda98f, #c7a97b, #ceab67, #d2ac51, #d4af37);
+    background-repeat: no-repeat;
+    background-size: 100%
+}
