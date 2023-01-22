@@ -25,3 +25,5 @@ REST-Rant is an app where users can review restaurants.
 
 ## FUTURE TASKS
  - [ ] finalize README
+ - [ ] remove blue underline from links
+ - [ ] add space between button and image on error404 page and Places page

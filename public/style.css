@@ -15,11 +15,20 @@
 
 h1 {
     text-align: center;
-    color: var(--palette-dark-red);
+    color: var(--palette-gold);
+    -webkit-text-stroke: 1px black;
 }
 
-body{
-    background-image:  linear-gradient(to right top, #d4af37, #d2ac51, #ceab67, #c7a97b, #bda98f, #bda98f, #bda98f, #bda98f, #c7a97b, #ceab67, #d2ac51, #d4af37);
+.mainImage {
+    max-width: 100%;
+    height: auto;
+}
+
+.link {
+    
+}
+/* body{
+    background-color:  linear-gradient(to right top, #d4af37, #d2ac51, #ceab67, #c7a97b, #bda98f, #bda98f, #bda98f, #bda98f, #c7a97b, #ceab67, #d2ac51, #d4af37);
     background-repeat: no-repeat;
     background-size: 100%
-}
+} */
