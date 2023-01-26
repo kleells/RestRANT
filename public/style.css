@@ -16,7 +16,6 @@
 h1 {
     text-align: center;
     color: var(--palette-gold);
-    -webkit-text-stroke: 1px black;
 }
 
 .mainImage {
