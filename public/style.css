@@ -16,6 +16,7 @@
 h1 {
     text-align: center;
     color: var(--palette-gold);
+    font-size: 3em;
 }
 
 .mainImage {
@@ -24,10 +25,38 @@ h1 {
 }
 
 .link {
-    
+    text-decoration: none;
+    color: grey
 }
-/* body{
-    background-color:  linear-gradient(to right top, #d4af37, #d2ac51, #ceab67, #c7a97b, #bda98f, #bda98f, #bda98f, #bda98f, #c7a97b, #ceab67, #d2ac51, #d4af37);
-    background-repeat: no-repeat;
-    background-size: 100%
-} */
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--palette-dark-red);
+    font-size: 1.5em;
+}
+
+nav a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+body {
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+main {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 30px;
+}
