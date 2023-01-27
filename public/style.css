@@ -29,6 +29,11 @@ h1 {
     color: grey
 }
 
+.placeName {
+    text-decoration: none;
+    color: black;
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
