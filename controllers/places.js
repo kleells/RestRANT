@@ -1,40 +1,63 @@
 const router = require('express').Router()
-const places = require('../models/places')
+const db = require('../models')
 
 router.get('/', (req, res) => {
-    res.render('places/index', { places })
+    db.Place.find()
+    .then((places) => {
+        res.render('places/index', { places })
+    })
+    .catch(err => {
+        console.log(err)
+        res.render('error404')
+    })
 })
 
 router.post('/', (req, res) => {
-    if (!req.body.pic) {
-        req.body.pic = 'https://images.unsplash.com/photo-1571974448718-ac26a9af7d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3RvcmVmcm9udHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-    }
-    if (!req.body.city) {
-        req.body.city = 'Anytown'
-    }
-    if (!req.body.state) {
-        req.body.state = 'USA'
-    }
-    places.push(req.body)
-    res.redirect('/places')
+    db.Place.create(req.body)
+    .then(() => {
+        res.redirect('/places')
     })
-
+    .catch(err => {
+        console.log('err', err)
+        res.render('error404')
+    })
+})
 
 router.get('/new', (req, res) => {
     res.render('places/new')
 })
 
 router.get('/:id', (req, res) => {
-    let id = Number(req.params.id)
-    if (isNaN(id)) {
+    db.Place.findById(req.params.id)
+    .then(place => {
+        res.render('places/show', { place })
+    })
+    .catch(err => {
+        console.log('err', err)
         res.render('error404')
-    }
-    else if (!places[id]) {
-        res.render('error404')
-    }
-    else {
-        res.render('places/show', { place: places[id] })
-    }
+    })
+})
+
+
+router.put('/:id', (req, res) => {
+    res.send('PUT /places/:id stub')
+})
+
+router.delete('/:id', (req, res) => {
+    res.send('DELETE /places/:id stub')
+})
+
+router.get('/:id/edit', (req, res) => {
+    res.send('GET edit form stub')
+})
+
+router.post('/:id/rant', (req, res) => {
+    res.send('GET /places/:id/rant stub')
+})
+
+router.delete('/:id/rant/:rantId', (req, res) => {
+    res.send('GET /places/:id/rant/:rantId stub')
 })
 
 module.exports = router
+

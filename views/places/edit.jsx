@@ -1,15 +1,62 @@
 const React = require('react')
-const Def = require('./default')
+const Def = require('../default')
 
-function editPlace () {
+function edit_form (data) {
     return (
         <Def>
             <main>
                 <h1>EDIT A PLACE</h1>
-                <p>A form will be added to edit place</p>
+                <form method='POST' action={`/places/${data.id}?_method=PUT`}>
+                    <div className='row'>
+                        <div className='form-group col-sm-6'>
+                            <label htmlFor='name'>Place Name</label>
+                            <input
+                                className='form-control'
+                                id='name'
+                                name='name'
+                                value={data.place.name}
+                                required
+                                />
+                        </div>
+                        <div className='form-group col-sm-6'>
+                            <label htmlFor='pic'>Photo of Place</label>
+                            <input
+                                className='form-control'
+                                type='url'
+                                id='pic'
+                                name='pic'
+                                />
+                        </div>
+                    </div>
+                    <div className='form-group'>
+                        <label htmlFor='city'>City</label>
+                        <input
+                            className='form-control'
+                            id='city'
+                            name='city'
+                            />
+                    </div>
+                    <div className='form-group'>
+                        <label htmlFor='state'>State</label>
+                        <input
+                            className='form-control'
+                            id='state'
+                            name='state'
+                            />
+                    </div>
+                    <div className='form-group'>
+                        <label htmlFor='cuisines'>Cuisine</label>
+                        <input
+                            className='form-control'
+                            id='cuisines'
+                            name='cuisines'
+                        />
+                    </div>
+                    <input className='btn btn-primary' type='submit' value="Add Place" />
+                </form>
             </main>
         </Def>
     )
 }
 
-module.exports = editPlace
+module.exports = edit_form

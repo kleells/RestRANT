@@ -1,7 +1,7 @@
 const React = require('react')
 const Def = require('../default')
 
-function showPlace (data) {
+function show (data) {
     return (
         <Def>
             <main>
@@ -14,17 +14,18 @@ function showPlace (data) {
                     Located in { data.place.city }, { data.place.state } and serving { data.place.cuisines }.
                 </p>
                 <p>Future comments section</p>
-                <a href={`/places/${data.i}/edit`} className="btn btn-warning"> 
-                    Edit   
-				</a>
-				<form method="POST" action={`/places/${data.i}?_method=DELETE`}> 
+                <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 
+                    Edit
+                </a>  
+                <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
                     <button type="submit" className="btn btn-danger">
                         Delete
                     </button>
-                </form>
+                </form>     
+
             </main>
         </Def>
     )
 }
 
-module.exports = showPlace
+module.exports = show
