@@ -1,11 +1,10 @@
-// Modules & Globals
+// Modules and Globals
 require('dotenv').config()
 const express = require('express')
-const app = express()
 const methodOverride = require('method-override')
+const app = express()
 
-// Express Settigns
-app.set('views', __dirname + '/views')
+// Express Settings
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))
@@ -23,5 +22,5 @@ app.get('*', (req, res) => {
     res.render('error404')
 })
 
-// PORT connections
+// Listen for Connections
 app.listen(process.env.PORT)
