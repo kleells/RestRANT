@@ -22,12 +22,12 @@ function index (data) {
             })
     return(
         <Def>
-            <main>
-                <h1>Places</h1>
-                <div className='row'>
-                    {placesFormatted}
-                </div>
-            </main>
+                <main>
+                    <h1>Places</h1>
+                    <div className='row'>
+                        {placesFormatted}
+                    </div>
+                </main>
         </Def>
     )
 }
