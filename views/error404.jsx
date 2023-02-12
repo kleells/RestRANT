@@ -12,9 +12,8 @@ function error404 () {
                 </a>
                 <div>
                     <img className='mainImage' src='/images/maze.jpeg' alt='Restaurant Interior'/>
-                    <div> Photo by <a href="https://unsplash.com/de/@sigmund?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-                            Sigmund</a> on <a href="https://unsplash.com/s/photos/maze?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-                            Unsplash</a>
+                    <div>
+                        Photo by Sigmund on Unsplash
                     </div>
                 </div>
             </main>

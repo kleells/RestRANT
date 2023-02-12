@@ -1,7 +1,7 @@
 const React = require('react')
 const Def = require('../default')
 
-function newPlace (data) {
+function new_form (data) {
     let message = ''
     if (data.message) {
         message = (
@@ -51,4 +51,4 @@ function newPlace (data) {
     )
 }
 
-module.exports = newPlace
+module.exports = new_form

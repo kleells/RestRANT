@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const comment = require('./comment')
 
 const placeSchema = new mongoose.Schema({
     name: { type: String, required: true },
@@ -16,7 +17,8 @@ const placeSchema = new mongoose.Schema({
 })
 
 placeSchema.methods.showEstablished = function() {
-    return `${this.name} has been serving ${this.city}, ${this.state} since ${this.founded}.`
+    return 
+        `${this.name} has been serving ${this.city}, ${this.state} since ${this.founded}.`
 }
 
 module.exports = mongoose.model('Place', placeSchema)
